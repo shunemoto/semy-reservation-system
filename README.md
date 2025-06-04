@@ -42,7 +42,7 @@
 * **ソフトウェア**:
     * **言語**: Python 
     * **主なライブラリ・フレームワーク**:
-        * NFC制御: smartcard
+        * NFC制御: `smartcard`
         * GPIO制御: `RPi.GPIO` (Raspberry PiのGPIOピン操作用)
         * Google API連携: `gspread`, `oauth2client` (Google Sheets API操作用)
         * Webフレームワーク: `Flask`
