@@ -28,11 +28,11 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
 3.  **順番確定・予約**: Webインターフェース上で順番を選択したり、直接予約操作を行います。
 4.  **リスト更新**: 操作完了後、Google Spreadsheetに戻り、予約者リストに自身の名前が追加・更新されていることを確認できます。
 5.  **完了操作**: 個ゼミが終わった後に完了ボタンを押せば、専用のWebインターフェースに移行し、自分の名前をリストから削除できます。
-![image](https://github.com/user-attachments/assets/fe575456-da9d-4dfd-bb67-0260e18de27a)
+
 環境としてはRaspberry Piを使用しており、NFCリーダーの他に、物理ボタンによる操作やLCDモニターへの予約者名表示といった、簡易的な電子工作も組み込んでいます。これにより、直感的でわかりやすい操作性を目指しました。もともと、AWS LambdaやGoogle Cloud Functionなどのサーバーを利用して完全にWeb上でシステムの管理を行う予定でしたが、先生からの助言により、一度google spreadsheetを利用してサーバーを利用せずにシステムを構築するように路線変更しました。今後の目標として、完全なWebアプリ化を残しています。
 
 ## 主な機能
-
+![image](https://github.com/user-attachments/assets/fe575456-da9d-4dfd-bb67-0260e18de27a)
 * **NFCによるユーザー認証**: 学生証のNFCタグを読み取り、利用者を識別します。
 * **Webベースの予約インターフェース**: PCやスマートフォンからアクセス可能な画面で予約操作（順番選択、予約確定）を行います。
 * **Google Spreadsheet連携**: 予約情報はリアルタイムでGoogle Spreadsheetに記録・更新され、一覧性が確保されます。
