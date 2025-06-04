@@ -173,7 +173,7 @@ Markdown
     * ユニットテストや結合テストを導入し、システムの信頼性を高める。
 
 ## ファイル構成
-
+```text
 .
 ├── static/              # CSSファイルや画像ファイル
 │   └── style.css        # (例)
@@ -185,3 +185,4 @@ Markdown
 ├── switch.py            # 物理ボタンスイッチ関連のプログラム
 ├── user_list.json       # ユーザー情報管理用ファイル
 └── reservation_list.json # 予約情報管理用ファイル
+```
