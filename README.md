@@ -23,6 +23,7 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
 2.  **予約操作**: Google Spreadsheet上に設置された予約ボタンを押すと、予約用のWebインターフェースに遷移します。
 3.  **順番確定・予約**: Webインターフェース上で順番を選択したり、直接予約操作を行います。
 4.  **リスト更新**: 操作完了後、Google Spreadsheetに戻り、予約者リストに自身の名前が追加・更新されていることを確認できます。
+5.  **完了操作**: 個ゼミが終わった後に完了ボタンを押せば、専用のWebインターフェースに移行し、自分の名前をリストから削除できます。
 
 環境としてはRaspberry Piを使用しており、NFCリーダーの他に、物理ボタンによる操作やLCDモニターへの予約者名表示といった、簡易的な電子工作も組み込んでいます。これにより、直感的でわかりやすい操作性を目指しました。
 
@@ -57,10 +58,13 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
 ├── static/              # CSSファイルや画像ファイル
 ├── templates/           # HTMLテンプレートファイル
 │   ├── error.html
+│   ├── finish.html
 │   └── reserve.html
 ├── nfc_reader.py        # NFC読み取り処理のメインプログラム
 ├── nfc_reader_lcd.py    # NFC読み取りとLCD表示処理のプログラム
 ├── switch.py            # 物理ボタンスイッチ関連のプログラム
-├── user_list.json       # ユーザー情報管理用ファイル
+├── client_secret.json   # googleAPI認証用json
+├── authorized_user.json # googleAPI認証用json
+├── user_list.json       # ユーザー情報管理用ファイル（個人情報のためgit上から削除しています）
 └── reservation_list.json # 予約情報管理用ファイル
 ```
