@@ -2,7 +2,6 @@
 https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv41w/edit?gid=0#gid=0
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fe575456-da9d-4dfd-bb67-0260e18de27a" alt="Image2" width="300"/>
   <img src="https://github.com/user-attachments/assets/7336643b-0698-4ff1-8bfd-0b595734988c" alt="Image2" width="300"/>
   <img src="https://github.com/user-attachments/assets/893d3db9-5c8f-4194-b659-d0f466da486d" alt="Image1" width="300"/>
 </p>
@@ -29,7 +28,7 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
 3.  **順番確定・予約**: Webインターフェース上で順番を選択したり、直接予約操作を行います。
 4.  **リスト更新**: 操作完了後、Google Spreadsheetに戻り、予約者リストに自身の名前が追加・更新されていることを確認できます。
 5.  **完了操作**: 個ゼミが終わった後に完了ボタンを押せば、専用のWebインターフェースに移行し、自分の名前をリストから削除できます。
-
+<img src="https://github.com/user-attachments/assets/fe575456-da9d-4dfd-bb67-0260e18de27a" alt="Image2" width="300"/>
 環境としてはRaspberry Piを使用しており、NFCリーダーの他に、物理ボタンによる操作やLCDモニターへの予約者名表示といった、簡易的な電子工作も組み込んでいます。これにより、直感的でわかりやすい操作性を目指しました。もともと、AWS LambdaやGoogle Cloud Functionなどのサーバーを利用して完全にWeb上でシステムの管理を行う予定でしたが、先生からの助言により、一度google spreadsheetを利用してサーバーを利用せずにシステムを構築するように路線変更しました。今後の目標として、完全なWebアプリ化を残しています。
 
 ## 主な機能
