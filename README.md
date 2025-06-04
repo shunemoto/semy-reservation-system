@@ -1,18 +1,10 @@
 # semy-reservation-system
 https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv41w/edit?gid=0#gid=0
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/7336643b-0698-4ff1-8bfd-0b595734988c" alt="Image2" width="300"/>
-      <br/>
-      </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/893d3db9-5c8f-4194-b659-d0f466da486d" alt="Image1" width="300"/>
-      <br/>
-      </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7336643b-0698-4ff1-8bfd-0b595734988c" alt="Image2" width="300"/>
+  <img src="https://github.com/user-attachments/assets/893d3db9-5c8f-4194-b659-d0f466da486d" alt="Image1" width="300"/>
+</p>
 
 ## 概要
 
