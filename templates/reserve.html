@@ -3,51 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>予約システム</title>
-    <script>
-        // 予約ボタンがクリックされたときに呼ばれる関数
-        function handleReserve() {
-            // 名前をJavaScriptに渡されたnameとして設定
-            var name = "{{ name }}";  // Flaskから渡されたnameをJavaScriptに渡す
+    <!-- CSS -->
+    <link href="../static/css/reserve.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
 
+    <title>個ゼミ予約システム</title>
+    <script>
+        function handleReserve() {
+            var name = "{{ name }}";
             fetch('/reserve', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ "name": name })  // Flaskから渡されたnameを送信
+                body: JSON.stringify({ "name": name })  // 通常予約（順番未指定）
             })
             .then(response => response.json())
             .then(data => {
-                alert(data.message);  // 予約完了メッセージを表示
-                window.close();  // 予約完了後、タブを閉じる
+                alert("予約完了!");
+                window.close();
             })
             .catch(error => {
                 console.error("予約処理に失敗しました:", error);
             });
         }
 
-        // 順番変更ボタンがクリックされたときに呼ばれる関数
         function handleChangeOrder() {
-            alert("順番変更の処理が開始されました。");
+            const newOrder = document.getElementById("newOrder").value;
+            const name = "{{ name }}";
 
-            // 順番変更の処理を書くことができます
-            // ここでは単にアラートを表示します
+            if (newOrder === "0") {
+                alert("順番を選択してください。");
+                return;
+            }
+
+            fetch('/reserve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "name": name,
+                    "reservation_order": parseInt(newOrder)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("順番変更完了!");
+                window.close();
+            })
+            .catch(error => {
+                console.error("順番変更に失敗しました:", error);
+            });
         }
     </script>
 </head>
 <body>
-
-    <h1>予約システム</h1>
-
-    <p>UID: {{ uid }}</p> <!-- 渡されたuidを表示 -->
-    <p>名前: {{ name }}</p> <!-- 渡されたnameを表示 -->
-
-    <!-- 予約完了ボタン -->
-    <button id="reserveButton" onclick="handleReserve()">予約完了</button>
-
-    <!-- 順番変更ボタン -->
-    <button id="changeOrderButton" onclick="handleChangeOrder()">順番変更</button>
-
+    <div class="aspect-box">
+        <div class="hukidashi">
+            <div class="overlay-image"></div>
+            <div class="title">
+                <h1>{{ name }}さん、コケンで待ってるね！</h1>
+            </div>
+        </div>
+        <div class="junban_henkou">
+            <label for="newOrder">新しい順番を選択：</label>
+            <select id="newOrder">
+                <option value="0">未選択</option>
+                <option value="1">1番目</option>
+                <option value="2">2番目</option>
+                <option value="3">3番目</option>
+                <option value="4">4番目</option>
+                <option value="5">5番目</option>
+                <option value="6">6番目</option>
+                <option value="7">7番目</option>
+                <option value="8">8番目</option>
+                <option value="9">9番目</option>
+                <option value="10">10番目</option>
+                <option value="11">11番目</option>
+                <option value="12">12番目</option>
+            <!-- 必要に応じて増やす -->
+            </select>
+        </div>
+        <div class="button-container">
+            <div class="yoyaku">
+                <a href="#" onclick="handleReserve()">予約する</a>
+            </div>
+            <div class="junban">
+                <a href="#" onclick="handleChangeOrder()">順番変更</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

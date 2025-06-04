@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link href="../static/css/reserve.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+    <title>個ゼミ完了</title>
+    <script>
+        function handlefinish() {
+            var name = "{{ name }}";
+            fetch('/reserve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ "name": name ,
+                    "reservation_order": -1
+                }) 
+                
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("個ゼミ完了!");
+                window.close();
+            })
+            .catch(error => {
+                console.error("予約処理に失敗しました:", error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="aspect-box">
+        <div class="hukidashi">
+            <div class="overlay-image"></div>
+            <div class="title">
+                <h1>{{ name }}さん、個ゼミ完了！</h1>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="yoyaku">
+                <a href="#" onclick="handlefinish()">個ゼミ完了</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

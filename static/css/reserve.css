@@ -1,0 +1,136 @@
+/*
+COLORS
+================================================ */
+:root {
+    --video-opacity: 1;
+    --light-blue: #4db1ec;
+    --blue: #1665cc;
+    --purple: #b473bf;
+    --pink: #ffb2c1;
+    --orange: #ff9f67;
+    --yellow: #ffd673;
+    --light-green: #a2e29b;
+    --green: #00a2af;
+    --grey: #333;
+    --white: #fff;
+    --snow: #fffafa;
+}
+/*
+GENERAL STYLING
+================================================ */
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/yamachan.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+/*
+COMMON
+================================================ */
+h1 {
+    font-size: 30px;
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: 200px;
+}
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+/*
+MAIN
+================================================ */
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 410px;
+    width: 700px;
+    height: 600px;
+    background-image: url(../images/hukidasi_4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 9999;
+}
+.title {
+    font-size: 30px;
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 180px;
+}
+.button-container {
+    display: flex;
+    gap: 200px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    font-size: 30px;
+    padding: 50px 100px;
+}
+.yoyaku a {
+    color: var(--white);
+    padding: 10px 20px;
+    background: #eda1a1;
+    box-shadow: 0 0 0 10px #eda1a1;
+    border: 3px dashed #e38787;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Potta One", system-ui;
+}
+.yoyaku a:hover {
+    color: var(--white);
+    background: #e38787;
+    box-shadow: 0 0 0 10px #e38787;
+    border: 3px dashed #eda1a1;
+}
+.junban a {
+    color: var(--white);
+    padding: 10px 20px;
+    background: var(--light-blue);
+    box-shadow: 0 0 0 10px var(--light-blue);
+    border: 3px dashed var(--blue);
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Potta One", system-ui;
+}
+.junban a:hover {
+    color: var(--white);
+    background: var(--blue);
+    box-shadow: 0 0 0 10px var(--blue);
+    border: 3px dashed var(--light-blue);
+}
+.junban_henkou {
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+    font-size: 30px;
+    color: #333;
+    font-family: "Potta One", system-ui;
+}
+
+.junban_henkou select {
+    font-size: 25px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    font-family: "Potta One", system-ui;
+}
