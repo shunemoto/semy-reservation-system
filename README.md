@@ -1,5 +1,5 @@
 # semy-reservation-system
-
+https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv41w/edit?gid=0#gid=0
 ## 概要
 
 本システムは、NFCリーダーとRaspberry Piを活用した個別予約システムです。学生証をかざすことでGoogle Spreadsheetと連携し、予約状況の確認や新規予約をスムーズに行うことができます。
