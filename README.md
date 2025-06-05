@@ -32,7 +32,7 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
 環境としてはRaspberry Piを使用しており、NFCリーダーの他に、物理ボタンによる操作やLCDモニターへの予約者名表示といった、簡易的な電子工作も組み込んでいます。これにより、直感的でわかりやすい操作性を目指しました。もともと、AWS LambdaやGoogle Cloud Functionなどのサーバーを利用して完全にWeb上でシステムの管理を行う予定でしたが、先生からの助言により、一度google spreadsheetを利用してサーバーを利用せずにシステムを構築するように路線変更しました。今後の目標として、完全なWebアプリ化を残しています。
 
 ## 主な機能
-![image](https://github.com/user-attachments/assets/fe575456-da9d-4dfd-bb67-0260e18de27a)
+![Image](https://github.com/user-attachments/assets/a512dc4c-99a0-4f4d-b9e8-f7c968db231c)
 * **NFCによるユーザー認証**: 学生証のNFCタグを読み取り、利用者を識別します。
 * **Flaskによるhtml+javascriptsでの予約インターフェース**: Flaskからアクセス可能な画面(html)で予約操作（順番選択、予約確定）を行います。
 * **Google Spreadsheet連携**: 予約情報はリアルタイムでGoogle Spreadsheetに記録・更新され、一覧性が確保されます。
