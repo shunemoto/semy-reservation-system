@@ -53,7 +53,7 @@ https://docs.google.com/spreadsheets/d/1raabg2CoCNvQDuBINfO6c5Hr0XXCmi9q_ZBegafv
         * GPIO制御: `RPi.GPIO` (Raspberry PiのGPIOピン操作用)
         * Google API連携: `gspread`, `oauth2client` (Google Sheets API操作用)
         * Webフレームワーク: `Flask`
-    * **インターフェース** `html`, `css`, `javascripts`
+    * **インターフェース**: `html`, `css`, `javascripts`
     * **データベース/データストレージ**: Google Spreadsheet
     * **その他**: `json` (ユーザーリスト、予約リストの読み書き用)
 
